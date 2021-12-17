@@ -1,3 +1,6 @@
+import speedtest
 
-import logging
-logging.exception("Hello World")
+st = speedtest.Speedtest()
+st.get_best_server()
+st.download()
+st.upload()

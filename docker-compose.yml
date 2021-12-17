@@ -4,5 +4,5 @@ services:
   speedchecker:
     container_name: speedchecker-container
     build: build/.
-    image: speedchecker-image:0.3
+    image: speedchecker-image:0.4
     restart: unless-stopped
