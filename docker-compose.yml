@@ -3,5 +3,6 @@ version: "3"
 services:
   speedchecker:
     container_name: speedchecker-container
-    image: python:3.11.0a3-slim-bullseye
+    build: build/.
+    image: speedchecker-image:0.1
     restart: unless-stopped
