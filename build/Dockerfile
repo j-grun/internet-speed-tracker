@@ -1,6 +1,4 @@
-FROM python:3.7-bullseye
-#WORKDIR /usr/src/app
-#COPY ./python .
-# Install required Python module
-RUN pip install speedtest-cli
-#RUN python ./tester.py
+FROM sgrun14/python-pip-speedtest
+WORKDIR /usr/src/app
+COPY ./python .
+RUN python ./tester.py
