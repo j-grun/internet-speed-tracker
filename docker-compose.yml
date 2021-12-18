@@ -1,4 +1,4 @@
-version: "3"
+version: "3.4"
 
 services:
   speedchecker:
@@ -6,5 +6,5 @@ services:
     build:
       context: build/.
       network: host
-    image: speedchecker-image:0.5
+    image: speedchecker-image:0.6
     restart: unless-stopped
