@@ -1,4 +1,4 @@
-FROM python:3.11.0a3-bullseye
+FROM python:3.10-bullseye
 COPY ./python /python
 WORKDIR /python
 # Install required Python module
