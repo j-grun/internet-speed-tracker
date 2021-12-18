@@ -3,5 +3,5 @@ WORKDIR /usr/src/app
 COPY ./python .
 # Install required Python module
 RUN pip install --upgrade pip
-RUN pip install speedtest-cli
+RUN pip install speedtest
 RUN python ./tester.py
