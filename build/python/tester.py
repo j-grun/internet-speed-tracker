@@ -3,7 +3,7 @@ from time import sleep
 
 st = speedtest.Speedtest()
 
-while TRUE:
+while True:
   st.get_best_server()
   st.download()
   st.upload()
