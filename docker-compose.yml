@@ -5,5 +5,5 @@ services:
     container_name: speedchecker-container
     build:
       context: build/.
-    image: speedchecker-image:0.8
+    image: speedchecker-image:0.9
     restart: unless-stopped
