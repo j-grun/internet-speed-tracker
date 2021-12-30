@@ -1,4 +1,3 @@
-# FROM sgrun14/python-pip-speedtest
 FROM python:latest
 RUN pip install speedtest-cli
 WORKDIR /usr/src/app
