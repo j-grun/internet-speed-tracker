@@ -4,10 +4,10 @@ services:
   speedchecker:
     container_name: speedchecker-container
     build:
-      context: build/.
+      context: build-python/.
     image: speedchecker-image:0.10
     restart: unless-stopped
-    
+
   database:
     container_name: mysql-database
     image: mysql
