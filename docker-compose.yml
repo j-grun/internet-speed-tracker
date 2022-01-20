@@ -7,3 +7,11 @@ services:
       context: build/.
     image: speedchecker-image:0.10
     restart: unless-stopped
+    
+  database:
+    container_name: mysql-database
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: securityisourwatchword
