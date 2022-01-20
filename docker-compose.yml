@@ -1,8 +1,9 @@
-version: "3"
+version: "3.5"
 
 services:
   speedchecker:
     container_name: speedchecker-container
-    build: build/.
-    image: speedchecker-image:0.4
+    build:
+      context: build/.
+    image: speedchecker-image:0.10
     restart: unless-stopped

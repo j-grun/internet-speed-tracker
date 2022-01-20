@@ -1,6 +1,10 @@
 import speedtest
+from time import sleep
 
 st = speedtest.Speedtest()
-st.get_best_server()
-st.download()
-st.upload()
+
+while True:
+  st.get_best_server()
+  st.download()
+  st.upload()
+  sleep(60)

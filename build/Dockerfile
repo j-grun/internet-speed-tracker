@@ -1,4 +1,5 @@
-FROM python:3.11.0a3-bullseye
-COPY ./python /python
-WORKDIR /python
-RUN python ./tester.py
+FROM python:latest
+RUN pip install speedtest-cli
+WORKDIR /usr/src/app
+COPY ./python .
+ENTRYPOINT ["python", "./tester.py"]
