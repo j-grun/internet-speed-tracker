@@ -9,9 +9,8 @@ services:
     restart: unless-stopped
 
   database:
-    container_name: mysql-database
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+    container_name: sqlite3-database
+    build:
+      context: build-sql/.
+    image: sqlite3-image:0.1
     restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: securityisourwatchword
