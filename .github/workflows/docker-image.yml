@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build-python:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Python Docker image
+      run: docker build ./build-python --file build-python/Dockerfile --tag python-image:$(date +%s)
+      
+  build-sql:
+    
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the SQL Docker image
+      run: docker build ./build-sql --file build-sql/Dockerfile --tag sqlite-image:$(date +%s)

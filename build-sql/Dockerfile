@@ -1,4 +1,5 @@
 FROM debian:latest
-RUN apt-get update
-RUN apt-get install sqlite3
-#invalid command to be fixed
+# Update package list
+# If that is successful, then install sqlite3
+# Use -y to skip the confirmation step during the install
+RUN apt-get update && apt-get install -y sqlite3
